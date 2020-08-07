@@ -17,7 +17,7 @@ setup(
     description='Blockcerts-bloxberg core models for python',
     author='info@bloxberg.org',
     tests_require=['tox'],
-    url='https://github.com/blockchain-certificates/cert-core',
+    url='https://github.com/crossoveranx/cert-core.git',
     license='MIT',
     author_email='info@bloxberg.org',
     long_description=long_description,

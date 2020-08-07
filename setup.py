@@ -12,14 +12,14 @@ with open(os.path.join(here, 'README.md')) as fp:
     long_description = fp.read()
 
 setup(
-    name='cert-core',
-    version='2.1.10',
-    description='Blockcerts core models for python',
-    author='info@blockcerts.org',
+    name='cert-core-bloxberg',
+    version='2.1.2',
+    description='Blockcerts-bloxberg core models for python',
+    author='info@bloxberg.org',
     tests_require=['tox'],
     url='https://github.com/blockchain-certificates/cert-core',
     license='MIT',
-    author_email='info@blockcerts.org',
+    author_email='info@bloxberg.org',
     long_description=long_description,
     packages=find_packages(),
     install_requires=reqs

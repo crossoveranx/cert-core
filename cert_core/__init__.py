@@ -7,6 +7,7 @@ CHAIN_BITCOIN_REGTEST = 'bitcoinRegtest'
 CHAIN_BITCOIN_TESTNET = 'bitcoinTestnet'
 CHAIN_ETHEREUM_MAINNET = 'ethereumMainnet'
 CHAIN_ETHEREUM_ROPSTEN = 'ethereumRopsten'
+CHAIN_ETHEREUM_BLOXBERG = 'ethereumBloxberg'
 CHAIN_MOCKCHAIN = 'mockchain'
 
 # system value for chains, including specific network. Used in config files for example
@@ -15,6 +16,7 @@ SYS_CHAIN_BITCOIN_REGTEST = 'bitcoin_regtest'
 SYS_CHAIN_BITCOIN_TESTNET = 'bitcoin_testnet'
 SYS_CHAIN_ETHEREUM_MAINNET = 'ethereum_mainnet'
 SYS_CHAIN_ETHEREUM_ROPSTEN = 'ethereum_ropsten'
+SYS_CHAIN_ETHEREUM_BLOXBERG = 'ethereum_bloxberg'
 SYS_CHAIN_MOCKCHAIN = 'mockchain'
 
 # signature type, part of signature suite standard
@@ -57,6 +59,7 @@ class Chain(Enum):
     mockchain = 3, BlockchainType.mock, CHAIN_MOCKCHAIN
     ethereum_mainnet = 4, BlockchainType.ethereum, CHAIN_ETHEREUM_MAINNET
     ethereum_ropsten = 5, BlockchainType.ethereum, CHAIN_ETHEREUM_ROPSTEN
+    ethereum_bloxberg = 6, BlockchainType.ethereum, CHAIN_ETHEREUM_BLOXBERG
 
     def __new__(cls, enum_value, blockchain_type, external_display_value):
         obj = object.__new__(cls)
@@ -79,6 +82,8 @@ class Chain(Enum):
             return Chain.ethereum_mainnet
         elif chain_string == SYS_CHAIN_ETHEREUM_ROPSTEN:
             return Chain.ethereum_ropsten
+        elif chain_string == SYS_CHAIN_ETHEREUM_BLOXBERG:
+            return Chain.ethereum_bloxberg
         else:
             raise UnknownChainError(chain_string)
 
@@ -96,6 +101,8 @@ class Chain(Enum):
             return Chain.ethereum_mainnet
         elif external_display_value == CHAIN_ETHEREUM_ROPSTEN:
             return Chain.ethereum_ropsten
+        elif external_display_value == CHAIN_ETHEREUM_BLOXBERG:
+            return Chain.ethereum_bloxberg
         else:
             raise UnknownChainError(external_display_value)
 
